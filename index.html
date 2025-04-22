@@ -11,8 +11,171 @@
     <meta property="og:image" content="coffeecoin-logo.png">
     <meta property="og:url" content="https://yourdomain.com">
     <title>CoffeeCoin - Brewing the Meme Coin Revolution</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="coffeecoin-logo.png" type="image/png">
+
+    <!-- CSS 통합 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(to right, #6f4e37, #d4a017);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .logo {
+            max-width: 120px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0.5rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #d4a017;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #b58900;
+        }
+
+        .btn-primary {
+            background-color: #F7931A; /* 비트코인 오렌지 색상 */
+        }
+
+        .btn-primary:hover {
+            background-color: #e0851a;
+        }
+
+        .hero, .features, .buy, .community {
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .hero {
+            background-color: #fff;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            color: #6f4e37;
+        }
+
+        .features {
+            background-color: #f4f4f4;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-icon {
+            max-width: 80px;
+            height: auto;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-icon:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature h3 {
+            margin: 0.5rem 0;
+            color: #6f4e37;
+        }
+
+        .buy {
+            background-color: #fff;
+        }
+
+        .buy ol {
+            max-width: 600px;
+            margin: 1rem auto;
+            text-align: left;
+        }
+
+        .community {
+            background: linear-gradient(to right, #6f4e37, #d4a017);
+            color: #fff;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer a {
+            color: #d4a017;
+            text-decoration: none;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .btn {
+                padding: 8px 16px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo {
+                max-width: 80px;
+            }
+
+            .feature-icon {
+                max-width: 60px;
+            }
+        }
+
+        /* SEO and Performance */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -38,7 +201,6 @@
             <h2>Why CoffeeCoin?</h2>
             <div class="feature-grid">
                 <div class="feature">
-                    <!-- 두 번째 이미지를 아이콘으로 사용 -->
                     <img src="feature-icon.png" alt="CoffeeCoin Feature Icon - A coffee cup with a Bitcoin symbol in a coffee shop setting" class="feature-icon">
                     <h3>Coffee Culture</h3>
                     <p>Coffee is a global obsession. CoffeeCoin taps into that universal love!</p>
@@ -67,7 +229,7 @@
                 <li>Swap on your favorite DEX (e.g., Raydium).</li>
                 <li>HODL and sip on the gains!</li>
             </ol>
-            <a href="https://raydium.io/swap/" target="_blank" class="btn btn-secondary">Buy Now</a>
+            <a href="https://raydium.io/swap/" target="_blank" class="btn btn-primary">Buy Now</a>
         </div>
     </section>
 
@@ -87,6 +249,37 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- JavaScript 통합 -->
+    <script>
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Lazy Load Images (for performance)
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll("img");
+            const options = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src || img.src;
+                        observer.unobserve(img);
+                    }
+                });
+            }, options);
+
+            images.forEach(img => observer.observe(img));
+        });
+    </script>
 </body>
 </html>
