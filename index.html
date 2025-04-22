@@ -1,127 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CoffeeCoin</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #fef3c7, #fcd34d);
-      color: #5c4033;
-      text-align: center;
-      padding: 2rem;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .logo {
-      width: 120px;
-      height: auto;
-      margin: 0 auto 1rem;
-      animation: fadeIn 1s ease-out;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      animation: fadeInDown 0.6s ease-out;
-    }
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      animation: fadeIn 1s ease-out;
-    }
-    .card-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    @media (min-width: 600px) {
-      .card-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-    .card {
-      background: white;
-      border: 2px solid #fbbf24;
-      border-radius: 1rem;
-      padding: 1.5rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .card h2 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .button {
-      display: inline-block;
-      background-color: #4b2e20;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      font-size: 1rem;
-      margin-top: 1rem;
-    }
-    .button:hover {
-      background-color: #6b3f27;
-    }
-    .footer {
-      margin-top: 3rem;
-      font-style: italic;
-    }
-    .sparkle {
-      font-size: 2rem;
-      color: #fbbf24;
-      animation: pulse 1.5s infinite;
-      margin-top: 1rem;
-    }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CoffeeCoin - The ultimate meme coin for coffee lovers! Join the brewing revolution with endless possibilities.">
+    <meta name="keywords" content="CoffeeCoin, meme coin, cryptocurrency, coffee lovers, blockchain, crypto">
+    <meta name="author" content="CoffeeCoin Team">
+    <meta property="og:title" content="CoffeeCoin - Brewing the Future of Meme Coins">
+    <meta property="og:description" content="Think about coffee's massive mindshare. From iced lattes to espresso martinis, CoffeeCoin is the meme coin for coffee lovers everywhere!">
+    <meta property="og:image" content="coffeecoin-logo.png">
+    <meta property="og:url" content="https://yourdomain.com">
+    <title>CoffeeCoin - Brewing the Meme Coin Revolution</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="coffeecoin-logo.png" type="image/png">
 </head>
 <body>
-  <div class="container">
-    <img src="logo.png" alt="CoffeeCoin Logo" class="logo" />
-    <h1>CoffeeCoin</h1>
-    <p>
-      Just think for a second how many people drink coffee, and how many different types there are—
-      from iced lattes to espresso martinis. The possibilities are endless, the mindshare massive.
-      The potential… staggering. We’re just getting started “brewing” as we like to say.
-    </p>
+    <header>
+        <div class="container">
+            <img src="coffeecoin-logo.png" alt="CoffeeCoin Logo - A coffee cup with a Bitcoin symbol" class="logo">
+            <h1>CoffeeCoin</h1>
+            <p>Brewing the Future of Meme Coins!</p>
+            <a href="https://x.com/itscoffeecoin" target="_blank" class="btn">Follow on X</a>
+        </div>
+    </header>
 
-    <div class="card-grid">
-      <div class="card">
-        <h2>Token Address</h2>
-        <p style="word-wrap: break-word;">8s5X3yLEx2rx8BxGT5uSwR9Z5FP5T64VLr4kkPStpump</p>
-      </div>
-      <div class="card">
-        <h2>Join the Buzz</h2>
-        <a href="https://x.com/itscoffeecoin" target="_blank" class="button">Follow us on X</a>
-      </div>
-    </div>
+    <section class="hero">
+        <div class="container">
+            <h2>☕ The Ultimate Coffee-Powered Meme Coin</h2>
+            <p>Just think for a second: how many people sip coffee daily? From iced lattes to espresso martinis, coffee’s mindshare is <strong>MASSIVE</strong>. CoffeeCoin is here to brew that energy into the crypto world!</p>
+            <p>The possibilities? <strong>Endless.</strong> The potential? <strong>Staggering.</strong></p>
+            <a href="#buy" class="btn btn-primary">Get Your CoffeeCoin</a>
+        </div>
+    </section>
 
-    <div class="footer">
-      <p>CoffeeCoin isn’t just a memecoin. It’s an <strong>energy-fueled movement</strong>.</p>
-      <p>Brew your portfolio. Sip the gains. Repeat.</p>
-      <div class="sparkle">✨</div>
-    </div>
-  </div>
+    <section class="features">
+        <div class="container">
+            <h2>Why CoffeeCoin?</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <!-- 두 번째 이미지를 아이콘으로 사용 -->
+                    <img src="feature-icon.png" alt="CoffeeCoin Feature Icon - A coffee cup with a Bitcoin symbol in a coffee shop setting" class="feature-icon">
+                    <h3>Coffee Culture</h3>
+                    <p>Coffee is a global obsession. CoffeeCoin taps into that universal love!</p>
+                </div>
+                <div class="feature">
+                    <img src="feature-icon.png" alt="CoffeeCoin Feature Icon - A coffee cup with a Bitcoin symbol in a coffee shop setting" class="feature-icon">
+                    <h3>Meme Magic</h3>
+                    <p>Powered by the internet’s funniest coffee memes. Join the vibe!</p>
+                </div>
+                <div class="feature">
+                    <img src="feature-icon.png" alt="CoffeeCoin Feature Icon - A coffee cup with a Bitcoin symbol in a coffee shop setting" class="feature-icon">
+                    <h3>Secure & Fast</h3>
+                    <p>Built on a robust blockchain for secure, instant transactions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="buy" class="buy">
+        <div class="container">
+            <h2>How to Buy CoffeeCoin</h2>
+            <p>Ready to join the brew? Grab your CoffeeCoin now!</p>
+            <ol>
+                <li>Set up a wallet (e.g., Solana-compatible).</li>
+                <li>Copy our contract address: <strong>8s5X3yLEx2rx8BxGT5uSwR9Z5FP5T64VLr4kkPStpump</strong></li>
+                <li>Swap on your favorite DEX (e.g., Raydium).</li>
+                <li>HODL and sip on the gains!</li>
+            </ol>
+            <a href="https://raydium.io/swap/" target="_blank" class="btn btn-secondary">Buy Now</a>
+        </div>
+    </section>
+
+    <section class="community">
+        <div class="container">
+            <h2>Join the CoffeeCoin Community</h2>
+            <p>We’re just getting started “brewing”! Follow us on X for the latest updates, memes, and giveaways.</p>
+            <a href="https://x.com/itscoffeecoin" target="_blank" class="btn">Join on X</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 CoffeeCoin. All rights reserved.</p>
+            <p>Contract Address: 8s5X3yLEx2rx8BxGT5uSwR9Z5FP5T64VLr4kkPStpump</p>
+            <a href="https://x.com/itscoffeecoin" target="_blank">Follow us on X</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
