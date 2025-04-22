@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CoffeeCoin</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fef3c7, #fcd34d);
+      color: #5c4033;
+      text-align: center;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .logo {
+      width: 120px;
+      height: auto;
+      margin: 0 auto 1rem;
+      animation: fadeIn 1s ease-out;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      animation: fadeInDown 0.6s ease-out;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      animation: fadeIn 1s ease-out;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    @media (min-width: 600px) {
+      .card-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .card {
+      background: white;
+      border: 2px solid #fbbf24;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .button {
+      display: inline-block;
+      background-color: #4b2e20;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    .button:hover {
+      background-color: #6b3f27;
+    }
+    .footer {
+      margin-top: 3rem;
+      font-style: italic;
+    }
+    .sparkle {
+      font-size: 2rem;
+      color: #fbbf24;
+      animation: pulse 1.5s infinite;
+      margin-top: 1rem;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="CoffeeCoin Logo" class="logo" />
+    <h1>CoffeeCoin</h1>
+    <p>
+      Just think for a second how many people drink coffee, and how many different types there are—
+      from iced lattes to espresso martinis. The possibilities are endless, the mindshare massive.
+      The potential… staggering. We’re just getting started “brewing” as we like to say.
+    </p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h2>Token Address</h2>
+        <p style="word-wrap: break-word;">8s5X3yLEx2rx8BxGT5uSwR9Z5FP5T64VLr4kkPStpump</p>
+      </div>
+      <div class="card">
+        <h2>Join the Buzz</h2>
+        <a href="https://x.com/itscoffeecoin" target="_blank" class="button">Follow us on X</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>CoffeeCoin isn’t just a memecoin. It’s an <strong>energy-fueled movement</strong>.</p>
+      <p>Brew your portfolio. Sip the gains. Repeat.</p>
+      <div class="sparkle">✨</div>
+    </div>
+  </div>
+</body>
+</html>
